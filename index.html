@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What’s My IP?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    .info-box { background: #f0f0f0; padding: 15px; margin: 10px 0; border-radius: 8px; }
+    button { margin-top: 5px; padding: 6px 10px; }
+  </style>
+</head>
+<body>
+  <h1>What's My IP Address?</h1>
+  <div class="info-box" id="ipInfo">Loading IP address...</div>
+
+  <h2>Your Browser Info</h2>
+  <div class="info-box">
+    <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+    <p><strong>Screen:</strong> <span id="screenInfo"></span></p>
+    <button onclick="copyText(document.getElementById('userAgent').innerText)">Copy User Agent</button>
+  </div>
+
+  <script>
+    // Safer API for IP only
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('ipInfo').innerHTML = `
+          <p><strong>IP Address:</strong> ${data.ip}</p>
+          <button onclick="copyText('${data.ip}')">Copy IP</button>
+        `;
+      })
+      .catch(err => {
+        document.getElementById('ipInfo').innerText = "Could not fetch IP.";
+        console.error(err);
+      });
+
+    // Device Info
+    document.getElementById('userAgent').innerText = navigator.userAgent;
+    document.getElementById('screenInfo').innerText = `${screen.width} x ${screen.height}`;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => alert("Copied!"));
+    }
+  </script>
+</body>
+</html>
