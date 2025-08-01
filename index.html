@@ -3,19 +3,6 @@
 <head>
   <title>What’s My IP?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
-<script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-<script>
-    window.ezstandalone = window.ezstandalone || {};
-    ezstandalone.cmd = ezstandalone.cmd || [];
-</script>
-  <script>
-    var ezouid = "YOUR_EZOIC_ID"; // replace with your actual Ezoic ID if required
-  </script>
-  <script data-cfasync="false" src="//www.ezoic.com/javascript/ezoic/async.js"></script>
-
   <style>
     body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
     .info-box { background: #f0f0f0; padding: 15px; margin: 10px 0; border-radius: 8px; }
@@ -23,14 +10,6 @@
   </style>
 </head>
 <body>
-  <!-- ✅ Ezoic: Privacy Consent Script (top of <body>) -->
-  <script>
-    window.ezogtk = 'ez-accept'; // for privacy/GDPR compliance
-  </script>
-
-  <!-- ✅ Ezoic Ad Placeholder (optional: top ad) -->
-  <div id="ezoic-pub-ad-placeholder-100"></div>
-
   <h1>What's My IP Address?</h1>
   <div class="info-box" id="ipInfo">Loading IP address...</div>
 
@@ -42,15 +21,14 @@
   </div>
 
   <div id="ezoic-pub-ad-placeholder-101"></div>
-<script>
+  <script>
     ezstandalone.cmd.push(function () {
-        ezstandalone.showAds(110, 104, 103, 102);
+        ezstandalone.showAds(101);
     });
-</script>
-  <div id="ezoic-pub-ad-placeholder-101"></div>
+  </script>
 
   <script>
-    // Safer API for IP only
+    // Fetch IP
     fetch('https://api.ipify.org?format=json')
       .then(response => response.json())
       .then(data => {
@@ -68,5 +46,10 @@
     document.getElementById('userAgent').innerText = navigator.userAgent;
     document.getElementById('screenInfo').innerText = `${screen.width} x ${screen.height}`;
 
+    // Copy Function
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => alert("Copied!"));
+    }
+  </script>
+</body>
+</html>
