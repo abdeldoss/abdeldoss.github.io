@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - My IP Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Terms of Service</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="terms-content">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using the My IP Info website, you agree to be bound by these Terms of Service.</p>
+            
+            <h2>2. Description of Service</h2>
+            <p>My IP Info provides a free service that displays your public IP address and related network information.</p>
+            
+            <h2>3. No Warranty</h2>
+            <p>The service is provided "as is" without any warranties of any kind, either express or implied.</p>
+            
+            <h2>4. Limitation of Liability</h2>
+            <p>In no event shall My IP Info be liable for any damages arising out of the use or inability to use the service.</p>
+            
+            <h2>5. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms at any time. Your continued use of the service constitutes acceptance of the modified terms.</p>
+            
+            <h2>6. Governing Law</h2>
+            <p>These terms shall be governed by and construed in accordance with the laws of your jurisdiction.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> My IP Info. All rights reserved.</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
