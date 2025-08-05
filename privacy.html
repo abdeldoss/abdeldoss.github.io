@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Privacy Policy</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - My IP Info</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Privacy Policy</h1>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <h1>Privacy Policy</h1>
+        </div>
+    </header>
 
-  <main>
-    <p>This website does not collect or store any personal information. IP information is fetched directly from a public API and is not logged.</p>
-  </main>
+    <main class="container">
+        <section class="privacy-content">
+            <h2>Information We Collect</h2>
+            <p>When you use our IP information service, we automatically collect and display your public IP address and related network information provided by your browser and internet service provider.</p>
+            
+            <h2>How We Use Information</h2>
+            <p>We use this information solely to display it back to you for your reference. We do not store, log, or retain any of this information on our servers.</p>
+            
+            <h2>Third-Party Services</h2>
+            <p>We use third-party APIs (ipapi.co and api.ipify.org) to retrieve your IP information. These services may collect and process your IP address according to their own privacy policies.</p>
+            
+            <h2>Cookies</h2>
+            <p>Our website does not use cookies or any other tracking technologies.</p>
+            
+            <h2>Changes to This Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+            
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us through our GitHub repository.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> My IP Info. All rights reserved.</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
