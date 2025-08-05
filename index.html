@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WhatIsMyIPCheck - Find Your IP Address</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is My IP</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
+  <header>
+    <h1>What's My IP?</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main Section -->
   <main>
-    <h1>Your IP Address</h1>
-    <div id="ip-info">
-      <p><strong>IP:</strong> <span id="ip">Loading...</span></p>
-      <p><strong>Location:</strong> <span id="location">Loading...</span></p>
-      <p><strong>Browser:</strong> <span id="browser">Loading...</span></p>
-    </div>
+    <section id="ipSection" aria-live="polite"></section>
+
+    <section>
+      <h2>Your Browser Info</h2>
+      <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+      <button id="copyUA">Copy User Agent</button>
+      <p><strong>Screen Size:</strong> <span id="screenInfo"></span></p>
+    </section>
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
