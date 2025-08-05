@@ -2,78 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>What's My IP? Find Your IP Address, Location, Timezone & Browser Info</title>
-  <meta name="description" content="Check your public IP address, location, timezone, and browser details instantly with our simple and free tool." />
-  <meta name="keywords" content="IP address, check IP, location lookup, timezone, browser info, internet, IP lookup, what's my IP" />
-  <meta name="author" content="WhatIsMyIPCheck.net" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatIsMyIPCheck - Find Your IP Address</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon-32x32.png" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4851964938478970" crossorigin="anonymous"></script>
-
-  <!-- JSON-LD for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "What's My IP?",
-    "description": "Check your public IP address, location, timezone, and browser details instantly.",
-    "url": "https://whatismyipcheck.net/"
-  }
-  </script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>What's My IP Address?</h1>
-  </header>
 
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
   <main>
-    <section class="info-box" aria-label="Introduction">
-      <h2>Welcome to WhatIsMyIPCheck.net</h2>
-      <p>
-        Need to know your public IP address, location, timezone, or browser information? You're in the right place. 
-        WhatIsMyIPCheck.net is a free, instant tool that gives you the essential details about your internet 
-        connection and browser in just one click.
-      </p>
-    </section>
-
-    <section class="info-box" aria-label="Why Check Your IP">
-      <h2>Why Check Your IP Address?</h2>
-      <ul>
-        <li>🔒 Verify if your VPN or proxy is working correctly</li>
-        <li>🌍 See what location websites detect you from</li>
-        <li>🛠 Troubleshoot internet or network connection issues</li>
-        <li>🌐 Understand your digital footprint for better privacy</li>
-      </ul>
-    </section>
-
-    <section class="info-box" aria-label="FAQs">
-      <h2>FAQs</h2>
-      <p><strong>Is my IP address private?</strong><br>
-      No — your public IP is visible to every website you visit. It’s how websites communicate with your device.</p>
-      <p><strong>Can someone track me using my IP?</strong><br>
-      Your IP may show your city and internet provider, but not your name or home address.</p>
-      <p><strong>Does my IP address change?</strong><br>
-      It may, depending on your ISP. Some provide static IPs, others dynamic ones.</p>
-    </section>
-
-    <section id="ipSection" class="info-box" aria-live="polite" aria-busy="true">
-      <div class="spinner" role="status" aria-label="Loading"></div>
-      <p>Loading IP address, location, and timezone...</p>
-    </section>
-
-    <section id="browserSection" class="info-box">
-      <h2>Your Browser Info</h2>
-      <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
-      <p><strong>Screen:</strong> <span id="screenInfo"></span></p>
-      <button id="copyUA">Copy User Agent</button>
-    </section>
+    <h1>Your IP Address</h1>
+    <div id="ip-info">
+      <p><strong>IP:</strong> <span id="ip">Loading...</span></p>
+      <p><strong>Location:</strong> <span id="location">Loading...</span></p>
+      <p><strong>Browser:</strong> <span id="browser">Loading...</span></p>
+    </div>
   </main>
 
-  <footer>
-    <p><a href="privacy.html">Privacy Policy</a></p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
